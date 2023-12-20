@@ -50,7 +50,7 @@ final class GetSessionsListOperation: GroupOperation {
 		
 		super.init(operations: operations)
 		
-		self.name = "GetLinksOperation"
+		self.name = "GetSessionsListOperation"
 	}
 
 }

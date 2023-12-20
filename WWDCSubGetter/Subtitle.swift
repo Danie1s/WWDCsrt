@@ -83,9 +83,9 @@ struct Subtitle: Comparable {
 	/// The url that used to download subtitle m3u8 file
 	var m3u8URL: URL {
         if self.wwdcYear == 2020 {
-            return URL(string: self.videoURLPrefix + "cc/en/en.m3u8")!
+            return URL(string: self.videoURLPrefix + "cc/zh/zh.m3u8")!
         }
-		return URL(string:self.videoURLPrefix + "subtitles/eng/prog_index.m3u8")!
+		return URL(string:self.videoURLPrefix + "subtitles/zho/prog_index.m3u8")!
 	}
 	
 	/// The id used to save subtitle in the model
@@ -164,9 +164,9 @@ struct Subtitle: Comparable {
 	/// This method gives url for download webvtt file related to given webvtt.
 	func url(for webvtt: Webvtt) -> URL {
         if self.wwdcYear == 2020 {
-            return URL(string: self.videoURLPrefix + "cc/en/" + webvtt.name)!
+            return URL(string: self.videoURLPrefix + "cc/zh/" + webvtt.name)!
         }
-        return URL(string: self.videoURLPrefix + "subtitles/eng/" + webvtt.name)!
+        return URL(string: self.videoURLPrefix + "subtitles/zho/" + webvtt.name)!
 	}
 	
 	/**
@@ -187,6 +187,16 @@ struct Subtitle: Comparable {
 		self.saveSrtFileAtDestination(with: subString)
 		SubtitlesProgress.changed()
 	}
+    
+    private var hdFolderPath: URL? {
+        guard let dir = model.destinationURL else { return nil }
+        let folderPathHD = "WWDC_\(self.wwdcYear)_Video_Subtitles/HD/"
+        return dir.appendingPathComponent(folderPathHD)
+    }
+    
+    var hdPath: URL? {
+        hdFolderPath?.appendingPathComponent(subtitleNameForHD)
+    }
 	
 	/**
 	This method saves given text as content of exported subtitle in a srt files.
@@ -197,26 +207,37 @@ struct Subtitle: Comparable {
 	*/
 	private func saveSrtFileAtDestination(with text: String) {
 		
-		if let dir = model.destinationURL {
-			
-			//writing
-			do {
-				let folderPathHD = "/WWDC_\(self.wwdcYear)_Video_Subtitles/HD/"
-				let folderPathSD = "/WWDC_\(self.wwdcYear)_Video_Subtitles/SD/"
-				try FileManager.default.createDirectory(atPath: dir.path + folderPathHD, withIntermediateDirectories: true, attributes: nil)
-				try FileManager.default.createDirectory(atPath: dir.path + folderPathSD, withIntermediateDirectories: true, attributes: nil)
-				
-				var path = dir.appendingPathComponent(folderPathHD + subtitleNameForHD)
-				try text.write(to: path, atomically: false, encoding: String.Encoding.utf8)
-				
-				path = dir.appendingPathComponent(folderPathSD + subtitleNameForSD)
-				try text.write(to: path, atomically: false, encoding: String.Encoding.utf8)
-				
-			}
-			catch {/* error handling here */
-				print(error.localizedDescription)
-			}
-		}
+//		if let dir = model.destinationURL {
+//			
+//			//writing
+//			do {
+//				let folderPathHD = "/WWDC_\(self.wwdcYear)_Video_Subtitles/HD/"
+//				let folderPathSD = "/WWDC_\(self.wwdcYear)_Video_Subtitles/SD/"
+//				try FileManager.default.createDirectory(atPath: dir.path + folderPathHD, withIntermediateDirectories: true, attributes: nil)
+//				try FileManager.default.createDirectory(atPath: dir.path + folderPathSD, withIntermediateDirectories: true, attributes: nil)
+//				
+//				var path = dir.appendingPathComponent(folderPathHD + subtitleNameForHD)
+//				try text.write(to: path, atomically: false, encoding: String.Encoding.utf8)
+//				
+//				path = dir.appendingPathComponent(folderPathSD + subtitleNameForSD)
+//				try text.write(to: path, atomically: false, encoding: String.Encoding.utf8)
+//				
+//			}
+//			catch {/* error handling here */
+//				print(error.localizedDescription)
+//			}
+//		}
+        
+        guard let hdFolderPath, let hdPath else { return }
+        
+        do {
+            try FileManager.default.createDirectory(at: hdFolderPath, withIntermediateDirectories: true, attributes: nil)
+            try text.write(to: hdPath, atomically: false, encoding: String.Encoding.utf8)
+            
+        }
+        catch {/* error handling here */
+            print(error.localizedDescription)
+        }
 	}
 	
 	func getARandomNumber() -> Int {

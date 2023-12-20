@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "CC46C271-839C-41F1-B5C0-FAEE342C3225"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1FCACC73-4B8A-4E19-A7E6-9649A5476D20"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WWDCSubGetter/DownloadWebvttOperation.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "init(subtitle:webvtt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1FCACC73-4B8A-4E19-A7E6-9649A5476D20 - f48c2ab5de62d4de"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WWDC_srt.DownloadWebvttOperation.init(subtitle: WWDC_srt.Subtitle, webvtt: WWDC_srt.Webvtt) -&gt; WWDC_srt.DownloadWebvttOperation"
+                  moduleName = "WWDC.srt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/daniels/Desktop/WWDCsrt/WWDCSubGetter/DownloadWebvttOperation.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "864">
+               </Location>
+               <Location
+                  uuid = "1FCACC73-4B8A-4E19-A7E6-9649A5476D20 - 8f4a2686d75a5419"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.URL&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in WWDC_srt.DownloadWebvttOperation.init(subtitle: WWDC_srt.Subtitle, webvtt: WWDC_srt.Webvtt) -&gt; WWDC_srt.DownloadWebvttOperation"
+                  moduleName = "WWDC.srt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/daniels/Desktop/WWDCsrt/WWDCSubGetter/DownloadWebvttOperation.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "168">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EF163227-DC3B-48B1-B23E-6735F30054E3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WWDCSubGetter/DownloadHtmlVideoPageOperation.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "init(wwdcYear:sessionNumber:cacheFile:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EF163227-DC3B-48B1-B23E-6735F30054E3 - f8c64cffdb96f959"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WWDC_srt.DownloadHtmlVideoPageOperation.init(wwdcYear: WWDC_srt.WWDC, sessionNumber: Swift.String, cacheFile: Foundation.URL) -&gt; WWDC_srt.DownloadHtmlVideoPageOperation"
+                  moduleName = "WWDC.srt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/daniels/Desktop/WWDCsrt/WWDCSubGetter/DownloadHtmlVideoPageOperation.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "1772">
+               </Location>
+               <Location
+                  uuid = "EF163227-DC3B-48B1-B23E-6735F30054E3 - ddc120e548c04c49"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.URL&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in WWDC_srt.DownloadHtmlVideoPageOperation.init(wwdcYear: WWDC_srt.WWDC, sessionNumber: Swift.String, cacheFile: Foundation.URL) -&gt; WWDC_srt.DownloadHtmlVideoPageOperation"
+                  moduleName = "WWDC.srt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/daniels/Desktop/WWDCsrt/WWDCSubGetter/DownloadHtmlVideoPageOperation.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "76">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
